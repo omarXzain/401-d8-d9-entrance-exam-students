@@ -10,6 +10,7 @@
         .bigDiv {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .smallDiv {
@@ -29,7 +30,7 @@
         <% ejsData2.forEach(newData2 =>{ %>
 
         <div class="smallDiv">
-            <img src="<%= newData2.image %>" alt="newData.name%>">
+            <img src="<%=newData2.image%>" alt="newData2.image%>">
             <h2><%= newData2.name %></h2>
             <h3><%= newData2.patronus %></h3>
             <p><%= newData2.alive %></p>

@@ -10,6 +10,7 @@
         .bigDiv {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .smallDiv {
@@ -29,17 +30,17 @@
     <div class="bigDiv">
 
         <div class="smallDiv">
-            <img src="<%= ejsData3.image %>" alt="ejsData3.name%>">
+            <img src="<%= ejsData3.image %>" alt="ejsData3.image%>">
             <h2><%= ejsData3.name %></h2>
             <h3><%= ejsData3.patronus %></h3>
             <p><%= ejsData3.alive %></p>
 
             <form action="/update/<%=ejsData3.id%>?_method=PUT" method="POST">
-                <input type="text" name="name" value="<%= ejsData3.name %>">
-                <input type="text" name="patronus" value="<%= ejsData3.patronus %>">
-                <input type="text" name="alive" value="<%= ejsData3.alive %>">
+                <input type="text" name="name" value="<%= ejsData3.name %>"><br>
+                <input type="text" name="patronus" value="<%= ejsData3.patronus %>"><br>
+                <input type="text" name="alive" value="<%= ejsData3.alive %>"><br>
 
-                <input type="submit" value="UPDATE">
+                <input type="submit" value="UPDATE"><br>
             </form>
 
             <form action="/delete/<%=ejsData3.id%>?_method=DELETE" method="POST">

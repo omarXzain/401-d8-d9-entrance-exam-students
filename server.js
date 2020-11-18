@@ -131,7 +131,7 @@ function deleteFun(req, res) {
     const values = [req.params.id];
 
     client.query(sql, values).then(data => {
-        res.redirect('/favo2')
+        res.redirect('/home')
     }).catch(error => console.log(` 4Could not connect to database\n${error}`));
 }
 

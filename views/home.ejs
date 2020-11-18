@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <style>
+        .bigDiv {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+        .smallDiv {
+            text-align: center;
+            background-color: crimson;
+            border: 2px solid black;
+        }
+
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigDiv">
+        <% ejsData.forEach(newData =>{ %>
+
+        <div class="smallDiv">
+            <img src="<%= newData.image %>" alt="newData.name%>">
+            <h2><%= newData.name %></h2>
+            <h3><%= newData.patronus %></h3>
+            <p><%= newData.alive %></p>
+
+            <form action="/favo" method="POST">
+                <input type="hidden" name="name" value="<%= newData.name %>">
+                <input type="hidden" name="patronus" value="<%= newData.patronus %>">
+                <input type="hidden" name="alive" value="<%= newData.alive %>">
+
+                <input type="submit" value="SAVE CHARACTER TO DATABASE">
+            </form>
+        </div>
+        <%});%>
+    </div>
+</body>
+
+</html>

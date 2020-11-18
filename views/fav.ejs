@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <style>
+        .bigDiv {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .smallDiv {
+            text-align: center;
+            background-color: crimson;
+            border: 2px solid black;
+        }
+
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigDiv">
+        <% ejsData2.forEach(newData2 =>{ %>
+
+        <div class="smallDiv">
+            <img src="<%= newData2.image %>" alt="newData.name%>">
+            <h2><%= newData2.name %></h2>
+            <h3><%= newData2.patronus %></h3>
+            <p><%= newData2.alive %></p>
+
+            <a href="/details/<%=newData2.id%>">Details</a>
+        </div>
+        <%});%>
+</body>
+
+</html>

@@ -2,6 +2,19 @@
     font-family: "Crimson Text", serif;
 }
 
+.bigDiv{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.smallDiv{
+    text-align: center;
+    background-color: crimson;
+    border: 2px solid black;
+}
+
+
+
 /* 
  Color Schema:
     Header, footer and cards backgrounds : #873436;
